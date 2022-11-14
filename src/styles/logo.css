@@ -1,0 +1,62 @@
+.logo {
+  margin-left: 10px;
+}
+
+.logo a {
+  color: rgb(33, 29, 29);
+  font-weight: 700;
+  padding: 15px 20px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 40px;
+}
+
+.logo a::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid;
+  border-left: 5px solid;
+  bottom: 0;
+  left: 0;
+}
+
+.logo a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid;
+  border-right: 5px solid;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    margin-top: 5px;
+  }
+  .logo a {
+    font-size: 15px;
+  }
+
+  .logo a span {
+    font-size: 20px;
+  }
+
+  .logo a::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .logo a::before {
+    width: 10px;
+    height: 10px;
+  }
+}
