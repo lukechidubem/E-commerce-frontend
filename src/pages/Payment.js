@@ -58,6 +58,32 @@ const Payment = () => {
                   onChange={(e) => setPaymentMethod(e.target.value)}
                 />
               </div>
+
+              <div className="form-group">
+                <label htmlFor="PayPal">PayPal</label>
+                <input
+                  type="radio"
+                  value="PayPal"
+                  checked={paymentMethodName === "PayPal"}
+                  className="radio"
+                  name=""
+                  id="PayPal"
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="Stripe">Stripe</label>
+                <input
+                  type="radio"
+                  value="Stripe"
+                  checked={paymentMethodName === "Stripe"}
+                  className="radio"
+                  name=""
+                  id="Stripe"
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                />
+              </div>
               <div className="form-group">
                 <button type="submit">Continue</button>
               </div>

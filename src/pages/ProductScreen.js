@@ -44,12 +44,13 @@ const ProductScreen = () => {
 
   return (
     // <ProductScreenCard product={product} />;
-    // loading ? (
-    //   <LoadingBox />
-    // ) : error ? (
-    //   <MessageBox>{error}</MessageBox>
-    // ) :
-    <ProductScreenCard product={product} />
+    loading ? (
+      <LoadingBox />
+    ) : error ? (
+      <MessageBox>{error}</MessageBox>
+    ) : (
+      <ProductScreenCard product={product} />
+    )
   );
 };
 

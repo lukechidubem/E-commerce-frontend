@@ -52,14 +52,14 @@ export default function DashboardScreen() {
   }, [userInfo]);
 
   return (
-    <div>
+    <>
       <h1>Dashboard</h1>
       {loading ? (
         <LoadingBox />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <>
+        <div>
           <Row>
             <Col md={4}>
               <Card>
@@ -77,7 +77,7 @@ export default function DashboardScreen() {
               <Card>
                 <Card.Body>
                   <Card.Title>
-                    {summary.orders && summary.users[0]
+                    {summary.orders[0] && summary.users[0]
                       ? summary.orders[0].numOrders
                       : // summary.orders[0]
                         0}
@@ -91,7 +91,7 @@ export default function DashboardScreen() {
                 <Card.Body>
                   <Card.Title>
                     $
-                    {summary.orders && summary.users[0]
+                    {summary.orders[0] && summary.users[0]
                       ? summary.orders[0].totalSales.toFixed(2)
                       : // summary.orders[0]
                         0}
@@ -135,8 +135,8 @@ export default function DashboardScreen() {
               ></Chart>
             )}
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 }

@@ -26,6 +26,9 @@ import UserListScreen from "./pages/UserListScreen";
 import UserEditScreen from "./pages/UserEditScreen";
 import ProductEditScreen from "./pages/ProductEditScreen";
 import ProductListScreen from "./pages/ProductListScreen";
+import OrderListScreen from "./pages/OrderListScreen";
+import Shipping from "./components/Shipping";
+import OrderScreen from "./pages/OrderScreen";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -51,13 +54,17 @@ function App() {
             <Route path="/product/:slug" element={<ProductScreen />} />
             <Route path="/profile" element={<UserProfile />} />
             <Route path="/orderhistory" element={<OrderHistory />} />
+            <Route path="/shipping" element={<Shipping />} />
 
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wish" element={<Wish />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/placeorder" element={<PlaceOrder />} />
-            <Route path="/order/:id" element={<OrderDetails />} />
+
+            {/* <Route path="/order/:id" element={<OrderDetails />} /> */}
+            <Route path="/order/:id" element={<OrderScreen />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
 
@@ -67,15 +74,20 @@ function App() {
             ></Route>
 
             <Route path="/admin/users" element={<UserListScreen />}></Route>
+
             <Route path="/admin/user/:id" element={<UserEditScreen />}></Route>
+
             <Route
               path="/admin/products"
               element={<ProductListScreen />}
             ></Route>
+
             <Route
               path="/admin/product/:id"
               element={<ProductEditScreen />}
             ></Route>
+
+            <Route path="/admin/orders" element={<OrderListScreen />}></Route>
           </Routes>
         </Router>
       </div>

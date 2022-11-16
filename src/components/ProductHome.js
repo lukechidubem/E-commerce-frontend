@@ -21,9 +21,9 @@ const ProductHome = ({ item }) => {
     const existItem = cart.cartItems.find((x) => x._id === item._id);
     const quantity = existItem ? existItem.quantity + 1 : 1; //if existItem than quantity + 1 in cart if not than 1
     // this you can put but you don’t have to
-    // const { data } = await axios.get(`/api/products/slug/${item.slug}`);
-    // if (data.countInStock < quantity) {
-    if (existItem && existItem.countInStock < quantity) {
+    const { data } = await axios.get(`/api/products/slug/${item.slug}`);
+    if (data.countInStock < quantity) {
+      // if (existItem && existItem.countInStock < quantity) {
       window.alert("Sorry. Product is out of stock.");
       return;
     }
@@ -36,7 +36,7 @@ const ProductHome = ({ item }) => {
   const addToWishHandler = () => {
     const existItem = wish.wishItems.find((x) => x._id === item._id);
     const quantity = existItem ? existItem.quantity : 1;
-    //const { data } = await axios.get(`/api/products/slug/${product.slug}`);
+    // const { data } = await axios.get(`/api/products/slug/${product.slug}`);
     if (existItem) {
       window.alert(
         "Sorry. You have already added the product to your wish list."

@@ -109,7 +109,9 @@ const PlaceOrder = () => {
             </div>
             <div className="order-payment">
               <h4>Payment:</h4>
-              <span>{cart.paymentMethod}</span>
+              <span>
+                <strong>Method:</strong> {cart.paymentMethod}
+              </span>
             </div>
             <div className="order-items">
               <h4 className="order-items-title">Items:</h4>

@@ -126,7 +126,7 @@ export default function OrderListScreen() {
                     : "No"}
                 </td>
                 <td>
-                  <Button
+                  <button
                     type="button"
                     variant="light"
                     onClick={() => {
@@ -134,15 +134,15 @@ export default function OrderListScreen() {
                     }}
                   >
                     Details
-                  </Button>
+                  </button>
                   &nbsp;
-                  <Button
+                  <button
                     type="button"
                     variant="light"
                     onClick={() => deleteHandler(order)}
                   >
                     Delete
-                  </Button>
+                  </button>
                 </td>
               </tr>
             ))}

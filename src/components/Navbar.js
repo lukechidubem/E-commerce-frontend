@@ -66,9 +66,9 @@ const MainNavbar = () => {
         </div>
         <div className="n-row middle-nav">
           <div className="n-col">
-            <Link to="/" className="logo">
-              <Logo />
-            </Link>
+            {/* <Link to="/" className="logo"> */}
+            <Logo />
+            {/* </Link> */}
           </div>
           <div className="n-col">
             <SearchBox />
@@ -137,19 +137,19 @@ const MainNavbar = () => {
               </li>
               {userInfo && (
                 <li className="list dropdown">
-                  <Link activeclassname="active" className="">
+                  <NavLink activeclassname="active" className="">
                     User <FontAwesomeIcon icon={faCaretDown} />
                     <div className="dropdown-container">
                       <Link to="/profile">User Profile</Link>
                       <Link to="/orderhistory">Order History</Link>
                     </div>
-                  </Link>
+                  </NavLink>
                 </li>
               )}
 
               {userInfo && userInfo.isAdmin && (
                 <li className="list dropdown">
-                  <Link to="" activeclassname="active " className="">
+                  <NavLink to="" activeclassname="active " className="">
                     Admin <FontAwesomeIcon icon={faCaretDown} />
                     <div className="dropdown-container">
                       <Link to="/admin/dashboard">Dashboard</Link>
@@ -157,7 +157,7 @@ const MainNavbar = () => {
                       <Link to="/admin/orders">Orders</Link>
                       <Link to="/admin/users">Users</Link>
                     </div>
-                  </Link>
+                  </NavLink>
                 </li>
               )}
             </ul>
