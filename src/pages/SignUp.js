@@ -6,7 +6,7 @@ import Register from "../components/Register";
 const SignUp = () => {
   return (
     <div>
-      <MainNavbar />
+      {/* <MainNavbar /> */}
       <Register />
       <Footer />
     </div>

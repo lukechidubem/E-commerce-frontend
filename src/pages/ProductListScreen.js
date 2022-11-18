@@ -9,6 +9,7 @@ import { Store } from "../Store";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { getError } from "../utils";
+import MainNavbar from "../components/Navbar";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -137,6 +138,7 @@ export default function ProductListScreen() {
 
   return (
     <div>
+      <MainNavbar />
       <Row>
         <Col>
           <h1>Products</h1>

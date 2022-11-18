@@ -29,6 +29,7 @@ import ProductListScreen from "./pages/ProductListScreen";
 import OrderListScreen from "./pages/OrderListScreen";
 import Shipping from "./components/Shipping";
 import OrderScreen from "./pages/OrderScreen";
+import FeaturedProduct from "./components/FeaturedProduct";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -64,6 +65,7 @@ function App() {
 
             {/* <Route path="/order/:id" element={<OrderDetails />} /> */}
             <Route path="/order/:id" element={<OrderScreen />} />
+            {/* <Route path="/order/:id" element={<FeaturedProduct />} /> */}
 
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
