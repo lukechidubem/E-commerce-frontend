@@ -1,13 +1,35 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { category, products } from "../db.js"; //but for now -> is not good
+import React, { useEffect, useState, useReducer } from "react";
+import { category } from "../db.js"; //but for now -> is not good
 import "../styles/productsshop.css";
+import logger from "use-reducer-logger";
 import ProductShop from "./ProductShop";
 import ReactPaginate from "react-paginate";
+import LoadingBox from "./LoadingBox.js";
+import MessageBox from "./MessageBox.js";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "FETCH_REQUEST":
+      return { ...state, loading: true };
+    case "FETCH_SUCCESS":
+      return { ...state, products: action.payload, loading: false };
+    case "FETCH_FAIL":
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
 const ProductsShop = () => {
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+    products: [],
+    loading: true,
+    error: "",
+  });
+
   //for filter category and all products
   const [data, setData] = useState(products);
 
@@ -39,12 +61,27 @@ const ProductsShop = () => {
     setData(result);
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch({ type: "FETCH_REQUEST" });
+      try {
+        const result = await axios.get("/api/products");
+        dispatch({ type: "FETCH_SUCCESS", payload: result.data });
+        setData(result.data);
+      } catch (err) {
+        dispatch({ type: "FETCH_FAIL", payload: err.message });
+      }
+      //   //setProducts(result.data);
+    };
+    fetchData();
+  }, []);
+
   //for show all category
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get("/api/category");
+      // console.log(result.data);
       // setCategory(result.data);
-      // setCategory(category);
     };
     fetchData();
   }, []);
@@ -54,6 +91,7 @@ const ProductsShop = () => {
       <div className="shop-row">
         <div className="shop-col">
           <h2>Catgeory</h2>
+
           <button className="shop-btn" onClick={() => setData(products)}>
             All <FontAwesomeIcon icon={faChevronRight} />
           </button>
@@ -70,7 +108,15 @@ const ProductsShop = () => {
           ))}
         </div>
         <div className="shop-col">
-          <div className="shop-products">{displayProducts}</div>
+          <div className="shop-products">
+            {loading ? (
+              <LoadingBox></LoadingBox>
+            ) : error ? (
+              <MessageBox>{error}</MessageBox>
+            ) : (
+              displayProducts
+            )}
+          </div>
           <div className="shop-pagination">
             <ReactPaginate
               previousLabel={"<<"} //for previous

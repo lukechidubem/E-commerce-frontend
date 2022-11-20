@@ -55,7 +55,7 @@ export default function DashboardScreen() {
   return (
     <>
       <MainNavbar />
-      <h1>Dashboard</h1>
+      <h1 style={{ marginTop: "200px" }}>Dashboard</h1>
       {loading ? (
         <LoadingBox />
       ) : error ? (

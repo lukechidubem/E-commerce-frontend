@@ -90,7 +90,7 @@ const Quick = ({ item }) => {
           </div>
           <div className="second-div div">
             <span className="price">Price: ${item.price}</span>
-            <div className="quantity">Quantity: 1</div>
+            <div className="quantity">Quantity: {item.countInStock}</div>
           </div>
           <div className="third-div div">
             <p className="desc">{item.desc}</p>

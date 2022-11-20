@@ -14,11 +14,15 @@
 }
 
 .search-container .search-icon {
-  font-size: 25px;
+  font-size: 30px;
   outline: none;
   box-sizing: 10px;
   cursor: pointer;
   margin-left: 30px;
+}
+
+.search-container button {
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 900px) {

@@ -1,5 +1,6 @@
 .orderhistory-container {
   min-height: 100vh;
+  margin-top: 200px;
 }
 
 .orderhistory-row:first-child {

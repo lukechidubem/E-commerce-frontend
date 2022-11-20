@@ -117,14 +117,14 @@ export default function OrderScreen() {
     toast.error(getError(err));
   }
 
-  function onAdminApproval() {
+  async function onAdminApproval() {
     console.log("working");
     // return order.capture().then(async function (details) {
     try {
       dispatch({ type: "PAY_REQUEST" });
-      const { data } = axios.put(
+      const { data } = await axios.put(
         `/api/orders/${order._id}/pay`,
-
+        {},
         {
           headers: { authorization: `Bearer ${userInfo.token}` },
         }
@@ -222,7 +222,7 @@ export default function OrderScreen() {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div>
+        <div style={{ marginTop: "200px" }}>
           {/* <Helmet> */}
           <title>Order {orderId}</title>
           {/* </Helmet> */}
@@ -252,7 +252,7 @@ export default function OrderScreen() {
                   </Card.Text>
                   {order.isDelivered ? (
                     <MessageBox variant="success">
-                      Delivered at {order.deliveredAt}
+                      Delivered at {order.deliveredAt.substring(0, 10)}
                     </MessageBox>
                   ) : (
                     <MessageBox variant="danger">Not Delivered</MessageBox>
@@ -267,7 +267,7 @@ export default function OrderScreen() {
                   </Card.Text>
                   {order.isPaid ? (
                     <MessageBox variant="success">
-                      Paid at {order.paidAt}
+                      Paid at {order.paidAt.substring(0, 10)}
                     </MessageBox>
                   ) : (
                     <MessageBox variant="danger">Not Paid</MessageBox>

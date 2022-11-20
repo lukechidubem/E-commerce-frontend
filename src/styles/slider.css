@@ -4,6 +4,7 @@
   height: 70vh;
   display: flex;
   overflow: hidden;
+  margin-top: 160px;
 }
 
 .s-arrow {
@@ -106,4 +107,10 @@
 
 .slide-text a:hover {
   background-color: #ff0000;
+}
+
+@media screen and (max-width: 900px) {
+  .s-container {
+    margin-top: 130px;
+  }
 }

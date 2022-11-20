@@ -1,6 +1,7 @@
 .message-container {
-  min-height: 100vh;
+  max-height: 100vh;
   padding-top: 30px;
+  margin-top: 160px;
 }
 
 .message {

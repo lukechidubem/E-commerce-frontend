@@ -5,12 +5,12 @@ import "../styles/searchboxsmall.css";
 import { useNavigate } from "react-router-dom";
 
 export default function SearchBoxSmall() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // navigate(query ? `/search/?query=${query}` : "/search");
+    navigate(query ? `/search/?query=${query}` : "/search");
   };
 
   return (

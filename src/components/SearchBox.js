@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function SearchBox() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // navigate(query ? `/search/?query=${query}` : "/search");
+    navigate(query ? `/search/?query=${query}` : "/search");
   };
 
   return (
@@ -25,13 +25,13 @@ export default function SearchBox() {
           aria-label="Search Products"
           aria-describedby="button-search"
         />
-        {/* <button variant="outline-primary" type="submit" id="button-search"> */}
-        <FontAwesomeIcon
-          type="submit"
-          className="search-icon"
-          icon={faSearch}
-        />
-        {/* </button> */}
+        <button variant="outline-primary" type="submit" id="button-search">
+          <FontAwesomeIcon
+            type="submit"
+            // className="search-icon"
+            icon={faSearch}
+          />
+        </button>
       </form>
     </div>
   );

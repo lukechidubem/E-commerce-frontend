@@ -155,6 +155,7 @@ const PlaceOrder = () => {
             </div>
             <div className="order-summary-button">
               <button
+                style={{ backgroundColor: "blue", color: "white" }}
                 type="button"
                 onClick={placeOrderHandler}
                 disabled={cart.cartItems.length === 0}

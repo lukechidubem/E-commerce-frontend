@@ -174,7 +174,7 @@ export default function ProductEditScreen() {
   return (
     <>
       <MainNavbar />
-      <Container className="small-container">
+      <Container className="small-container" style={{ marginTop: "200px" }}>
         <Helmet>
           <title>Edit Product ${productId}</title>
         </Helmet>
@@ -308,9 +308,17 @@ export default function ProductEditScreen() {
               />
             </Form.Group>
             <div className="mb-3">
-              <Button disabled={loadingUpdate} type="submit">
+              <button
+                style={{
+                  backgroundColor: "blue",
+                  color: "white",
+                  borderRadius: "6px",
+                }}
+                disabled={loadingUpdate}
+                type="submit"
+              >
                 Update
-              </Button>
+              </button>
               {loadingUpdate && <LoadingBox></LoadingBox>}
             </div>
           </Form>

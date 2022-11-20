@@ -1,5 +1,6 @@
 .payment-container {
   min-height: 100vh;
+  margin-top: 200px;
 }
 
 .payment-row:first-child {

@@ -8,6 +8,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { Store } from "../Store";
 import { getError } from "../utils";
+import MainNavbar from "../components/Navbar";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -89,10 +90,11 @@ export default function OrderListScreen() {
 
   return (
     <div>
+      <MainNavbar />
       <Helmet>
         <title>Orders</title>
       </Helmet>
-      <h1>Orders</h1>
+      <h1 style={{ marginTop: "200px" }}>Orders</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -118,17 +120,16 @@ export default function OrderListScreen() {
                 <td>{order.user ? order.user.name : "DELETED USER"}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
-                {/* <td>{order.isPaid ? order.paidAt.substring(0, 10) : "No"}</td> */}
-                <td>{order.isPaid ? order.paidAt : "No"}</td>
+                <td>{order.isPaid ? order.paidAt.substring(0, 10) : "No"}</td>
 
                 <td>
                   {order.isDelivered
-                    ? // ? order.deliveredAt.substring(0, 10)
-                      order.deliveredAt
+                    ? order.deliveredAt.substring(0, 10)
                     : "No"}
                 </td>
                 <td>
                   <button
+                    style={{ backgroundColor: "yellow", color: "black" }}
                     type="button"
                     variant="light"
                     onClick={() => {
@@ -139,6 +140,7 @@ export default function OrderListScreen() {
                   </button>
                   &nbsp;
                   <button
+                    style={{ backgroundColor: "red", color: "white" }}
                     type="button"
                     variant="light"
                     onClick={() => deleteHandler(order)}

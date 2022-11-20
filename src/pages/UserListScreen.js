@@ -94,7 +94,7 @@ export default function UserListScreen() {
       <Helmet>
         <title>Users</title>
       </Helmet>
-      <h1>Users</h1>
+      <h1 style={{ marginTop: "200px" }}>Users</h1>
 
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
@@ -121,6 +121,11 @@ export default function UserListScreen() {
                 <td>{user.isAdmin ? "YES" : "NO"}</td>
                 <td>
                   <button
+                    style={{
+                      backgroundColor: "yellow",
+                      color: "black",
+                      borderRadius: "6px",
+                    }}
                     type="button"
                     variant="light"
                     onClick={() => navigate(`/admin/user/${user._id}`)}
@@ -129,6 +134,11 @@ export default function UserListScreen() {
                   </button>
                   &nbsp;
                   <button
+                    style={{
+                      backgroundColor: "red",
+                      color: "white",
+                      borderRadius: "6px",
+                    }}
                     type="button"
                     variant="light"
                     onClick={() => deleteHandler(user)}

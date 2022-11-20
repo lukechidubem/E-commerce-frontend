@@ -137,83 +137,101 @@ export default function ProductListScreen() {
   };
 
   return (
-    <div>
+    <>
       <MainNavbar />
-      <Row>
-        <Col>
-          <h1>Products</h1>
-        </Col>
-        <Col className="col text-end">
-          <div>
-            <Button type="button" onClick={createHandler}>
-              Create Product
-            </Button>
-          </div>
-        </Col>
-      </Row>
-
-      {loadingCreate && <LoadingBox></LoadingBox>}
-      {loadingDelete && <LoadingBox></LoadingBox>}
-
-      {loading ? (
-        <LoadingBox></LoadingBox>
-      ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
-      ) : (
-        <>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>TITLE</th>
-                <th>PRICE</th>
-                <th>CATEGORY</th>
-                {/* <th>BRAND</th> */}
-                <th>ACTIONS</th>
-              </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <tr key={product._id}>
-                  <td>{product._id}</td>
-                  <td>{product.title}</td>
-                  <td>{product.price}</td>
-                  <td>{product.category}</td>
-                  {/* <td>{product.brand}</td> */}
-                  <td>
-                    <button
-                      type="button"
-                      variant="light"
-                      onClick={() => navigate(`/admin/product/${product._id}`)}
-                    >
-                      Edit
-                    </button>
-                    &nbsp;
-                    <button
-                      type="button"
-                      variant="light"
-                      onClick={() => deleteHandler(product)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div>
-            {[...Array(pages).keys()].map((x) => (
-              <Link
-                className={x + 1 === Number(page) ? "btn text-bold" : "btn"}
-                key={x + 1}
-                to={`/admin/products?page=${x + 1}`}
+      <div style={{ marginTop: "200px" }}>
+        <Row>
+          <Col>
+            <h1>Products</h1>
+          </Col>
+          <Col className="col text-end">
+            <div>
+              <Button
+                style={{ marginTop: "200px" }}
+                type="button"
+                onClick={createHandler}
               >
-                {x + 1}
-              </Link>
-            ))}
-          </div>
-        </>
-      )}
-    </div>
+                Create Product
+              </Button>
+            </div>
+          </Col>
+        </Row>
+
+        {loadingCreate && <LoadingBox></LoadingBox>}
+        {loadingDelete && <LoadingBox></LoadingBox>}
+
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <>
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>TITLE</th>
+                  <th>PRICE</th>
+                  <th>CATEGORY</th>
+                  {/* <th>BRAND</th> */}
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products.map((product) => (
+                  <tr key={product._id}>
+                    <td>{product._id}</td>
+                    <td>{product.title}</td>
+                    <td>{product.price}</td>
+                    <td>{product.category}</td>
+                    {/* <td>{product.brand}</td> */}
+                    <td>
+                      <button
+                        style={{
+                          backgroundColor: "yellow",
+                          color: "black",
+                          borderRadius: "6px",
+                        }}
+                        type="button"
+                        variant="light"
+                        onClick={() =>
+                          navigate(`/admin/product/${product._id}`)
+                        }
+                      >
+                        Edit
+                      </button>
+                      &nbsp;
+                      <button
+                        style={{
+                          backgroundColor: "red",
+                          color: "white",
+                          borderRadius: "6px",
+                        }}
+                        type="button"
+                        variant="light"
+                        onClick={() => deleteHandler(product)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div>
+              {[...Array(pages).keys()].map((x) => (
+                <Link
+                  className={x + 1 === Number(page) ? "btn text-bold" : "btn"}
+                  key={x + 1}
+                  to={`/admin/products?page=${x + 1}`}
+                >
+                  {x + 1}
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 }

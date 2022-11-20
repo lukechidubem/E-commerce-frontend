@@ -67,7 +67,7 @@ const UserProfile = () => {
   return (
     <>
       <Navbar />
-      <div className="signin-container">
+      <div className="signin-container" style={{ marginTop: "200px" }}>
         <div className="signin-row">
           <div className="signin-col">
             <form onSubmit={submitHandler}>

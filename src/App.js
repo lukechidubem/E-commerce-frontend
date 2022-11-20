@@ -30,6 +30,7 @@ import OrderListScreen from "./pages/OrderListScreen";
 import Shipping from "./components/Shipping";
 import OrderScreen from "./pages/OrderScreen";
 import FeaturedProduct from "./components/FeaturedProduct";
+import SearchScreen from "./pages/SearchScreen";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -37,20 +38,21 @@ import FeaturedProduct from "./components/FeaturedProduct";
 function App() {
   return (
     <div id="outer-container">
-      <div className="sidebar-container">
-        <Sidebar
-          pageWrapId={"page-wrap"}
-          outerContainerId={"outer-container"}
-        />
-      </div>
-      <div id="page-wrap">
-        <Router>
+      <Router>
+        <div className="sidebar-container">
+          <Sidebar
+            pageWrapId={"page-wrap"}
+            outerContainerId={"outer-container"}
+          />
+        </div>
+        <div id="page-wrap">
           <ToastContainer position="bottom-center" limit={1} />
           <Routes>
             {/* <MainNavbar /> */}
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/search" element={<SearchScreen />} />
             <Route path="/account" element={<Account />} />
             <Route path="/product/:slug" element={<ProductScreen />} />
             <Route path="/profile" element={<UserProfile />} />
@@ -91,8 +93,8 @@ function App() {
 
             <Route path="/admin/orders" element={<OrderListScreen />}></Route>
           </Routes>
-        </Router>
-      </div>
+        </div>
+      </Router>
     </div>
   );
 }

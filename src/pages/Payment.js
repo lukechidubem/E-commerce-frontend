@@ -85,7 +85,16 @@ const Payment = () => {
                 />
               </div>
               <div className="form-group">
-                <button type="submit">Continue</button>
+                <button
+                  style={{
+                    backgroundColor: "blue",
+                    color: "white",
+                    borderRadius: "6px",
+                  }}
+                  type="submit"
+                >
+                  Continue
+                </button>
               </div>
             </form>
           </div>

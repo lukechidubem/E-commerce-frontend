@@ -1,6 +1,7 @@
 .cart-container {
   min-height: 100vh;
   padding: 30px 10px;
+  margin-top: 160px;
 }
 
 .cart-row:first-child {
