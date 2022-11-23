@@ -40,7 +40,7 @@ const UserProfile = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        "/api/users/profile",
+        "https://lukescommerce.onrender.com/api/users/profile",
         {
           name,
           email,

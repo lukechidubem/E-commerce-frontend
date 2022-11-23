@@ -65,7 +65,9 @@ const ProductsShop = () => {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const result = await axios.get("/api/products");
+        const result = await axios.get(
+          "https://lukescommerce.onrender.com/api/products"
+        );
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
         setData(result.data);
       } catch (err) {
@@ -79,7 +81,9 @@ const ProductsShop = () => {
   //for show all category
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get("/api/category");
+      const result = await axios.get(
+        "https://lukescommerce.onrender.com/api/category"
+      );
       // console.log(result.data);
       // setCategory(result.data);
     };

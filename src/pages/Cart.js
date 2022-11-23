@@ -22,7 +22,9 @@ const Cart = () => {
   } = state;
 
   const updateCartHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/products/slug/${item.slug}`);
+    const { data } = await axios.get(
+      `https://lukescommerce.onrender.com/api/products/slug/${item.slug}`
+    );
     if (data.countInStock < quantity) {
       window.alert("Sorry. Product is out of stock.");
       return;

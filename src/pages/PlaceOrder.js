@@ -49,7 +49,7 @@ const PlaceOrder = () => {
       dispatch({ type: "CREATE_REQUEST" });
 
       const { data } = await axios.post(
-        "/api/orders",
+        "https://lukescommerce.onrender.com/api/orders",
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,

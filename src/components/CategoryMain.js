@@ -33,7 +33,7 @@ const CategoryMain = () => {
     // const fetchData = async () => {
     //   dispatch({ type: "FETCH_REQUEST" });
     //   try {
-    //     const result = await axios.get("/api/category");
+    //     const result = await axios.get("https://lukescommerce.onrender.com/api/category");
     //     dispatch({ type: "FETCH_SUCCESS", payload: result.data });
     //   } catch (err) {
     //     dispatch({ type: "FETCH_FAIL", payload: err.message });

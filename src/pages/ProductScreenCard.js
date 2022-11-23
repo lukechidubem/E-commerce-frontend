@@ -22,7 +22,9 @@ const ProductScreenCard = ({ product }) => {
     const quantity = existItem ? existItem.quantity + 1 : 1; //if existItem than quantity + 1 in cart if not than 1
 
     //this you can put but you don’t have to
-    const { data } = await axios.get(`/api/products/slug/${product.slug}`);
+    const { data } = await axios.get(
+      `https://lukescommerce.onrender.com/api/products/slug/${product.slug}`
+    );
     if (data.countInStock < quantity) {
       window.alert("Sorry. Product is out of stock.");
       return;
@@ -40,7 +42,7 @@ const ProductScreenCard = ({ product }) => {
     const existItem = wish.wishItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity : 1;
 
-    //const { data } = await axios.get(`/api/products/slug/${product.slug}`);
+    //const { data } = await axios.get(`https://lukescommerce.onrender.com/api/products/slug/${product.slug}`);
     if (existItem) {
       window.alert(
         "Sorry. You have already added the product to your wish list."

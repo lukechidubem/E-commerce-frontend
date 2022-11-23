@@ -47,7 +47,9 @@ const Slider = () => {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const result = await axios.get("/api/slider");
+        const result = await axios.get(
+          "https://lukescommerce.onrender.com/api/slider"
+        );
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });

@@ -92,8 +92,8 @@ export default function SearchScreen() {
     const fetchData = async () => {
       try {
         const data = await axios.get(
-          `/api/products/search?category=${category}&page=${page}&query=${query}&price=${price}&order=${order}`
-          // `/api/products/search`
+          `https://lukescommerce.onrender.com/api/products/search?category=${category}&page=${page}&query=${query}&price=${price}&order=${order}`
+          // `https://lukescommerce.onrender.com/api/products/search`
         );
 
         console.log(data);
@@ -114,7 +114,9 @@ export default function SearchScreen() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(`/api/products/categories`);
+        const { data } = await axios.get(
+          `https://lukescommerce.onrender.com/api/products/categories`
+        );
         setCategories(data);
         console.log(data);
       } catch (err) {

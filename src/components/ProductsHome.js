@@ -31,7 +31,9 @@ const ProductsHome = () => {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const result = await axios.get("/api/products");
+        const result = await axios.get(
+          "https://lukescommerce.onrender.com/api/products"
+        );
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
@@ -52,7 +54,7 @@ const ProductsHome = () => {
           <h1 className="error">{error}</h1>
         ) : (
           products
-            // .slice(-8)
+            .slice(-8)
             .map((item) => <ProductHome item={item} key={item._id} />)
         )}
       </div>
