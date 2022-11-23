@@ -52,7 +52,7 @@ const ProductsHome = () => {
           <h1 className="error">{error}</h1>
         ) : (
           products
-            .slice(-8)
+            // .slice(-8)
             .map((item) => <ProductHome item={item} key={item._id} />)
         )}
       </div>
