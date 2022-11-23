@@ -7,7 +7,7 @@ import { Store } from "../Store";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import { products } from "../db";
+// import { products } from "../db";
 
 const ProductScreenCard = ({ product }) => {
   const navigate = useNavigate();
@@ -67,8 +67,8 @@ const ProductScreenCard = ({ product }) => {
                 <TransformWrapper>
                   <TransformComponent>
                     <img
-                      src={selectedImage || products.image}
-                      alt={products.title}
+                      src={selectedImage || product.image}
+                      alt={product.title}
                     />
                   </TransformComponent>
                 </TransformWrapper>
@@ -76,42 +76,42 @@ const ProductScreenCard = ({ product }) => {
               </div>
               <div className="screen-bottom">
                 <img
-                  src={products.image}
-                  onClick={() => setSelectedImage(`${products.image}`)}
-                  alt={products.title}
+                  src={product.image}
+                  onClick={() => setSelectedImage(`${product.image}`)}
+                  alt={product.title}
                 />
                 <img
-                  src={products.image1}
-                  onClick={() => setSelectedImage(`${products.image1}`)}
-                  alt={products.title}
+                  src={product.image1}
+                  onClick={() => setSelectedImage(`${product.image1}`)}
+                  alt={product.title}
                 />
                 <img
-                  src={products.image2}
-                  onClick={() => setSelectedImage(`${products.image2}`)}
-                  alt={products.title}
+                  src={product.image2}
+                  onClick={() => setSelectedImage(`${product.image2}`)}
+                  alt={product.title}
                 />
                 <img
-                  src={products.image3}
-                  onClick={() => setSelectedImage(`${products.image3}`)}
-                  alt={products.title}
+                  src={product.image3}
+                  onClick={() => setSelectedImage(`${product.image3}`)}
+                  alt={product.title}
                 />
               </div>
             </div>
           </div>
           <div className="screen-col">
             <div className="first-div div">
-              <h2 className="title">{products.title}</h2>
-              <p className="category">{products.category}</p>
+              <h2 className="title">{product.title}</h2>
+              <p className="category">{product.category}</p>
             </div>
             <div className="second-div div">
-              <span className="price">Price: ${products.price}</span>
-              <div className="quantity">Quantity: 1</div>
+              <span className="price">Price: ${product.price}</span>
+              <div className="quantity">Quantity: {product.countInStock}</div>
             </div>
             <div className="third-div div">
-              <p className="desc">{products.desc}</p>
+              <p className="desc">{product.desc}</p>
             </div>
             <div className="fourth-div div">
-              {products.countInStock === 0 ? (
+              {product.countInStock === 0 ? (
                 <button className="cart cart-out" disabled>
                   Out of stock
                 </button>

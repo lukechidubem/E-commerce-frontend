@@ -1,6 +1,6 @@
 .order-details-container {
   min-height: 100vh;
-  margin-top: 160px;
+  margin-top: 200px;
 }
 
 .order-details-row {
@@ -10,7 +10,8 @@
 .order-details-title {
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 5px;
+
+  margin-top: 20px;
 }
 
 .order-details-subtitle {
@@ -21,4 +22,10 @@
 .after {
   font-size: 10px;
   color: #ff0000;
+}
+
+@media screen and (max-width: 991px) {
+  .order-details-container {
+    margin-top: 130px;
+  }
 }

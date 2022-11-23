@@ -8,6 +8,7 @@
 }
 
 .payment-title {
+  margin-top: 10px;
   text-align: center;
   letter-spacing: 1.4px;
 }
@@ -40,4 +41,10 @@
   width: max-content;
   display: block;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+  .payment-container {
+    margin-top: 130px;
+  }
 }

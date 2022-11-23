@@ -65,3 +65,9 @@
 .orderhistory-row:last-child .orderhistory-col .account-back a:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 991px) {
+  .orderhistory-container {
+    margin-top: 130px;
+  }
+}
