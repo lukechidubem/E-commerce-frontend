@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import MainNavbar from "../components/Navbar";
+import "../styles/dashboard.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -58,7 +59,7 @@ export default function DashboardScreen() {
   return (
     <>
       <MainNavbar />
-      <h1 style={{ marginTop: "200px" }}>Dashboard</h1>
+      <h1 className="dashboard">Dashboard</h1>
       {loading ? (
         <LoadingBox />
       ) : error ? (

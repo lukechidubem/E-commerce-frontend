@@ -12,6 +12,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import Button from "react-bootstrap/Button";
 import MainNavbar from "../components/Navbar";
+import "../styles/productListScreen.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -146,12 +147,6 @@ export default function ProductEditScreen() {
       );
       dispatch({ type: "UPLOAD_SUCCESS" });
 
-      // if (forImages) {
-      //   setImages([...images, data.secure_url]);
-      // } else {
-      //   setImage(data.secure_url);
-      // }
-
       if (image === "image1") {
         return setImage1(data.secure_url);
       } else if (image === "image2") {
@@ -180,7 +175,7 @@ export default function ProductEditScreen() {
   return (
     <>
       <MainNavbar />
-      <Container className="small-container" style={{ marginTop: "200px" }}>
+      <Container className="small-container">
         <Helmet>
           <title>Edit Product ${productId}</title>
         </Helmet>

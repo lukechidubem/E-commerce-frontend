@@ -1,0 +1,26 @@
+.product-list-container,
+.small-container {
+  margin-top: 200px;
+}
+
+.create-btn {
+  margin-top: 200px;
+}
+
+@media screen and (max-width: 991px) {
+  .product-list-container,
+  .small-container {
+    margin: 130px 20px 0 20px;
+  }
+
+  .create-btn {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    margin-right: 10px;
+  }
+
+  .product-list-container h1 {
+    margin-top: 20px;
+  }
+}

@@ -10,6 +10,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { getError } from "../utils";
 import MainNavbar from "../components/Navbar";
+import "../styles/productListScreen.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -145,15 +146,16 @@ export default function ProductListScreen() {
   return (
     <>
       <MainNavbar />
-      <div style={{ marginTop: "200px" }}>
+      <div className="product-list-container">
         <Row>
           <Col>
-            <h1>Products</h1>
+            <h1 style={{ marginTop: "10px" }}>Products</h1>
           </Col>
           <Col className="col text-end">
             <div>
               <Button
-                style={{ marginTop: "200px" }}
+                className="create-btn"
+                // style={{ marginTop: "200px" }}
                 type="button"
                 onClick={createHandler}
               >
