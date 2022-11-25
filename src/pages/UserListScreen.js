@@ -9,6 +9,7 @@ import MessageBox from "../components/MessageBox";
 import MainNavbar from "../components/Navbar";
 import { Store } from "../Store";
 import { getError } from "../utils";
+import "../styles/productListScreen.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -100,7 +101,7 @@ export default function UserListScreen() {
       <Helmet>
         <title>Users</title>
       </Helmet>
-      <h1 style={{ marginTop: "200px" }}>Users</h1>
+      <h1 className="product-list-container">Users</h1>
 
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (

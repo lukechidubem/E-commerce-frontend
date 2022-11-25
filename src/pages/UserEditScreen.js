@@ -11,6 +11,7 @@ import MessageBox from "../components/MessageBox";
 import { Store } from "../Store";
 import { getError } from "../utils";
 import MainNavbar from "../components/Navbar";
+import "../styles/productListScreen.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -96,7 +97,7 @@ export default function UserEditScreen() {
   return (
     <>
       <MainNavbar />
-      <Container className="small-container" style={{ marginTop: "200px" }}>
+      <Container className="product-list-container">
         <Helmet>
           <title>Edit User ${userId}</title>
         </Helmet>

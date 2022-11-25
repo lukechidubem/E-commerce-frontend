@@ -1,5 +1,5 @@
 .b-container {
-  height: 40vh;
+  max-height: 100vh;
 }
 
 .b-row {

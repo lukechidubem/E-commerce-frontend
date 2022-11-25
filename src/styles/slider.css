@@ -21,6 +21,7 @@
   cursor: pointer;
   transition: all 1s;
   z-index: 2;
+  color: #ff0000;
 }
 
 .s-arrow.left {
@@ -83,11 +84,13 @@
 
 .slide-text h1 {
   font-size: 40px;
+  color: #ff0000;
 }
 
 .slide-text p {
   font-size: 20px;
   margin-bottom: 40px;
+  color: #ff0000;
 }
 
 .slide-text a {
@@ -112,5 +115,13 @@
 @media screen and (max-width: 900px) {
   .s-container {
     margin-top: 130px;
+  }
+
+  .slide-text h1 {
+    font-size: 25px;
+  }
+
+  .slide-text p {
+    font-size: 15px;
   }
 }
