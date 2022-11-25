@@ -111,6 +111,7 @@ export default function ProductListScreen() {
             headers: { Authorization: `Bearer ${userInfo.token}` },
           }
         );
+
         toast.success("product created successfully");
         dispatch({ type: "CREATE_SUCCESS" });
         navigate(`/admin/product/${data.product._id}`);
