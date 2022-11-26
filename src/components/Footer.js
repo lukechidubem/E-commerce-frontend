@@ -9,11 +9,9 @@ const Footer = () => {
       <div className="f-row">
         <div className="f-col">
           <Logo />
-          <p className="address">
-            Address: 33 Emenuke Street Meryland Enugu, Nigeria
-          </p>
-          <p>Email: stlukejohnson@gmail.com</p>
-          <p>Phone No: +2340000004444</p>
+          <p className="address">Address: Maryland Enugu, Nigeria</p>
+          <p>Email: lukechidubem@gmail.com</p>
+          <p>Phone No: +2347038879424</p>
         </div>
         <div className="f-col">
           <h2>Quick Links</h2>

@@ -5,11 +5,11 @@
 
 .screen-row {
   display: flex;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
 .screen-col {
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 25px 10px;
 }
 
