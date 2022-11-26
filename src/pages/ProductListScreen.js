@@ -230,11 +230,12 @@ export default function ProductListScreen() {
             <div>
               {[...Array(pages).keys()].map((x) => (
                 <Link
+                  style={{ backgroundColor: "red" }}
                   className={x + 1 === Number(page) ? "btn text-bold" : "btn"}
                   key={x + 1}
                   to={`/admin/products?page=${x + 1}`}
                 >
-                  {x + 1}
+                  {x + 1} Click
                 </Link>
               ))}
             </div>

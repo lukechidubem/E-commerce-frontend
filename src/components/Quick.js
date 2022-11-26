@@ -95,7 +95,7 @@ const Quick = ({ item }) => {
             <div className="quantity">Quantity: {item.countInStock}</div>
           </div>
           <div className="third-div div">
-            <p className="desc">{item.desc}</p>
+            <p className="desc">{item.description}</p>
           </div>
           <div className="fourth-div div">
             {item.countInStock === 0 ? (

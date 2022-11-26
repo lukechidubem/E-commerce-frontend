@@ -1,3 +1,13 @@
 .contact-container {
-  margin-top: 160px;
+  margin-top: 220px;
+  padding: 100px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  .contact-container {
+    margin-top: 130px;
+    padding: 80px;
+    font-size: 20px;
+  }
 }

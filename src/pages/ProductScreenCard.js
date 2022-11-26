@@ -110,7 +110,7 @@ const ProductScreenCard = ({ product }) => {
               <div className="quantity">Quantity: {product.countInStock}</div>
             </div>
             <div className="third-div div">
-              <p className="desc">{product.desc}</p>
+              <p className="desc">{product.description}</p>
             </div>
             <div className="fourth-div div">
               {product.countInStock === 0 ? (

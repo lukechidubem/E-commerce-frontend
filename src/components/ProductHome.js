@@ -3,6 +3,7 @@ import {
   faEye,
   faHeart,
   faShoppingBag,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useState } from "react";
@@ -75,7 +76,7 @@ const ProductHome = ({ item }) => {
           </button>
         ) : (
           <button>
-            <FontAwesomeIcon icon={faShoppingBag} onClick={addToCartHandler} />
+            <FontAwesomeIcon icon={faShoppingCart} onClick={addToCartHandler} />
           </button>
         )}
       </div>

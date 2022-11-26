@@ -6,6 +6,7 @@ import {
   faShoppingBag,
   faUser,
   faCaretDown,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import "../styles/navbar.css";
 import { Link, NavLink } from "react-router-dom";
@@ -98,7 +99,7 @@ const MainNavbar = () => {
               </a>
               <a href="/cart">
                 <span>
-                  <FontAwesomeIcon icon={faShoppingBag} />
+                  <FontAwesomeIcon icon={faShoppingCart} />
                   {cart.cartItems.length > 0 && (
                     <span className="totalItems">
                       {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
