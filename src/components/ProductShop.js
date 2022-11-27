@@ -59,7 +59,7 @@ const ProductShop = ({ item }) => {
       </div>
       <div className="card-body">
         <h3 className="title">{item.title}</h3>
-        <span>${item.price}</span>
+        <span>&#8358; {item.price}</span>
       </div>
       <div className="card-footer">
         <button>

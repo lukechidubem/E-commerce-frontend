@@ -91,7 +91,7 @@ const Quick = ({ item }) => {
             <p className="category">{item.category}</p>
           </div>
           <div className="second-div div">
-            <span className="price">Price: ${item.price}</span>
+            <span className="price">Price: &#8358; {item.price}</span>
             <div className="quantity">Quantity: {item.countInStock}</div>
           </div>
           <div className="third-div div">

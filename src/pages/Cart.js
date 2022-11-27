@@ -109,7 +109,7 @@ const Cart = () => {
               <div className="checkout-body">
                 <h3 className="checkout-title">
                   Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{" "}
-                  items) : $
+                  items) : &#8358;
                   {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                 </h3>
               </div>

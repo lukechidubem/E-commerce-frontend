@@ -96,7 +96,7 @@ export default function DashboardScreen() {
               <Card>
                 <Card.Body>
                   <Card.Title>
-                    $
+                    &#8358;
                     {summary.orders[0] && summary.users[0]
                       ? summary.orders[0].totalSales.toFixed(2)
                       : // summary.orders[0]

@@ -113,7 +113,7 @@ const OrderDetails = () => {
                     </div>
                     <div className="order-card-footer">
                       <span>{item.quantity}</span>
-                      <span>${item.price}</span>
+                      <span>&#8358; {item.price}</span>
                     </div>
                   </div>
                 ))}
@@ -124,19 +124,19 @@ const OrderDetails = () => {
             <h2 className="order-summary">Order Summary</h2>
             <div className="order-summary-info">
               <h4>Items</h4>
-              <span>${order.itemsPrice.toFixed(2)}</span>
+              <span>&#8358; {order.itemsPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-info">
               <h4>Shipping</h4>
-              <span>${order.shippingPrice.toFixed(2)}</span>
+              <span>&#8358; {order.shippingPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-info">
               <h4>Tax</h4>
-              <span>${order.taxPrice.toFixed(2)}</span>
+              <span>&#8358; {order.taxPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-info">
               <h3>Total</h3>
-              <span>${order.totalPrice.toFixed(2)}</span>
+              <span>&#8358; {order.totalPrice.toFixed(2)}</span>
             </div>
           </div>
         </div>

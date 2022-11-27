@@ -106,7 +106,7 @@ const ProductScreenCard = ({ product }) => {
               <p className="category">{product.category}</p>
             </div>
             <div className="second-div div">
-              <span className="price">Price: ${product.price}</span>
+              <span className="price">Price: &#8358;{product.price}</span>
               <div className="quantity">Quantity: {product.countInStock}</div>
             </div>
             <div className="third-div div">

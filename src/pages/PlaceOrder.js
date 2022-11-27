@@ -124,7 +124,7 @@ const PlaceOrder = () => {
                     </div>
                     <div className="order-card-footer">
                       <span>{item.quantity}</span>
-                      <span>${item.price}</span>
+                      <span>&#8358; {item.price}</span>
                     </div>
                   </div>
                 ))}
@@ -139,19 +139,19 @@ const PlaceOrder = () => {
             <h2 className="order-summary">Order Summary</h2>
             <div className="order-summary-info">
               <h4>Items</h4>
-              <span>${cart.itemsPrice.toFixed(2)}</span>
+              <span>&#8358; {cart.itemsPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-info">
               <h4>Shipping</h4>
-              <span>${cart.shippingPrice.toFixed(2)}</span>
+              <span>&#8358; {cart.shippingPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-info">
               <h4>Tax</h4>
-              <span>${cart.taxPrice.toFixed(2)}</span>
+              <span>&#8358; {cart.taxPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-info">
               <h3>Total</h3>
-              <span>${cart.totalPrice.toFixed(2)}</span>
+              <span>&#8358; {cart.totalPrice.toFixed(2)}</span>
             </div>
             <div className="order-summary-button">
               <button
