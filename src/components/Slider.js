@@ -80,13 +80,6 @@ const Slider = () => {
               <div className="img-container">
                 <img src={item.image} className="s-img" alt="" />
               </div>
-              {/* <div className="slide-text">
-                <h1>{item.h1}</h1>
-                <p>{item.p}</p>
-                <Link to="/shop">
-                  Shop Now <FontAwesomeIcon icon={faShoppingCart} />
-                </Link>
-              </div> */}
             </div>
           ))
         )}

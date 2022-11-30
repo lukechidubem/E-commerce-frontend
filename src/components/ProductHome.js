@@ -60,7 +60,7 @@ const ProductHome = ({ item }) => {
         </Link>
       </div>
       <div className="card-body">
-        <h3 className="title">{item.title}</h3>
+        <h4 className="title">{item.title}</h4>
         <span>&#8358; {item.price}</span>
       </div>
       <div className="card-footer">

@@ -33,6 +33,11 @@
   padding: 10px 5px;
 }
 
+.card-body h4 {
+  background-color: black;
+  color: white;
+}
+
 .card-footer {
   padding: 15px 5px;
   display: flex;

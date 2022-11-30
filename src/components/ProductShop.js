@@ -21,7 +21,6 @@ const ProductShop = ({ item }) => {
     const { data } = await axios.get(
       `https://lukescommerce.onrender.com/api/products/slug/${item.slug}`
     );
-    // console.log(existItem.countInStock, quantity);
 
     if (data.countInStock < quantity) {
       // if (existItem && existItem.countInStock < quantity) {
@@ -58,7 +57,7 @@ const ProductShop = ({ item }) => {
         </Link>
       </div>
       <div className="card-body">
-        <h3 className="title">{item.title}</h3>
+        <h4 className="title">{item.title}</h4>
         <span>&#8358; {item.price}</span>
       </div>
       <div className="card-footer">

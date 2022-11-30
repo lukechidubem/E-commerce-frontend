@@ -39,7 +39,7 @@ export default function Sidebar(props) {
 
         {userInfo && userInfo.isAdmin && (
           <li className="list dropdown">
-            <NavLink to="" activeclassname="active " className="">
+            <div activeclassname="active " className="">
               Admin <FontAwesomeIcon icon={faCaretDown} />
               <div className="dropdown-container">
                 <Link to="/admin/dashboard">Dashboard</Link>
@@ -47,7 +47,7 @@ export default function Sidebar(props) {
                 <Link to="/admin/orders">Orders</Link>
                 <Link to="/admin/users">Users</Link>
               </div>
-            </NavLink>
+            </div>
           </li>
         )}
       </Menu>

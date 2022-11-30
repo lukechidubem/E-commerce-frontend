@@ -2,15 +2,16 @@
   min-height: 100vh;
 }
 
-.register-container {
+/* .register-container {
   margin-top: 80px;
-}
+} */
 
 .signin-col {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 
 form {
@@ -18,6 +19,7 @@ form {
   padding: 10px 15px;
   border-radius: 5px;
   width: 400px;
+  background-color: white;
 }
 
 form h2 {

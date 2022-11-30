@@ -138,19 +138,19 @@ const MainNavbar = () => {
               </li>
               {userInfo && (
                 <li className="list dropdown">
-                  <NavLink activeclassname="active" className="">
+                  <div activeclassname="active" className="added">
                     User <FontAwesomeIcon icon={faCaretDown} />
                     <div className="dropdown-container">
                       <Link to="/profile">User Profile</Link>
                       <Link to="/orderhistory">Order History</Link>
                     </div>
-                  </NavLink>
+                  </div>
                 </li>
               )}
 
               {userInfo && userInfo.isAdmin && (
                 <li className="list dropdown">
-                  <NavLink to="" activeclassname="active " className="">
+                  <div activeclassname="active " className="added">
                     Admin <FontAwesomeIcon icon={faCaretDown} />
                     <div className="dropdown-container">
                       <Link to="/admin/dashboard">Dashboard</Link>
@@ -158,7 +158,7 @@ const MainNavbar = () => {
                       <Link to="/admin/orders">Orders</Link>
                       <Link to="/admin/users">Users</Link>
                     </div>
-                  </NavLink>
+                  </div>
                 </li>
               )}
             </ul>

@@ -1,5 +1,7 @@
 .f-container {
   padding: 20px 15px;
+  background-color: black;
+  color: white;
 }
 
 .f-row {
@@ -34,7 +36,7 @@
 }
 
 .f-col:first-child p {
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 1.2px;
 }
 
@@ -52,8 +54,8 @@
 
 .f-col:nth-child(2) ul li a,
 .f-col:nth-child(3) ul li a {
-  color: #001e28;
   letter-spacing: 1.2px;
+  color: white;
 }
 
 .f-col:nth-child(2) ul li a:hover,
