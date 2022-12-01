@@ -6,7 +6,6 @@ import SignIn from "../components/SignIn";
 const Login = () => {
   return (
     <div>
-      {/* <MainNavbar /> */}
       <SignIn />
       <Footer />
     </div>

@@ -32,9 +32,6 @@ import OrderScreen from "./pages/OrderScreen";
 import FeaturedProduct from "./components/FeaturedProduct";
 import SearchScreen from "./pages/SearchScreen";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap.bundle.min";
-
 function App() {
   return (
     <div id="outer-container">
