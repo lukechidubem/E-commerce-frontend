@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/sidebar.css";
-import SearchBoxSmall from "./SearchBoxSmall";
+// import SearchBoxSmall from "./SearchBoxSmall";
 
 export default function Sidebar(props) {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -21,9 +21,9 @@ export default function Sidebar(props) {
   return (
     <>
       <Menu>
-        <div className="menu-item search-menu">
+        {/* <div className="menu-item search-menu">
           <SearchBoxSmall />{" "}
-        </div>
+        </div> */}
         <a className="menu-item" href="/">
           Home <FontAwesomeIcon icon={faHome} />
         </a>
